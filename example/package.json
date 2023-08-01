@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint --ext .ts src",
+    "clean": "rm -rf build",
+    "emulator": "firebase emulators:start --project=example",
+    "exec:transaction-update": "npm run build; FIRESTORE_EMULATOR_HOST='127.0.0.1:8080' node build/transaction-update.js",
+    "exec:batch-update": "npm run build; FIRESTORE_EMULATOR_HOST='127.0.0.1:8080' node build/batch-update.js",
+    "exec:read_then_do_something": "npm run build; FIRESTORE_EMULATOR_HOST='127.0.0.1:8080' node build/read_then_do_something.js",
+    "exec:simple_and_onSuccess_and_rollback": "npm run build; FIRESTORE_EMULATOR_HOST='127.0.0.1:8080' node build/simple_and_onSuccess_and_rollback.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "firebase-tools": "^12.4.6",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.10.1"
+  }
+}
