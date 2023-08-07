@@ -60,7 +60,7 @@ await publisher.publish(
 );
 ```
 
-The entire code can be found in `example/src/transaction-update.ts`.
+The entire code can be found in `examples/src/transaction-update.ts`.
 
 ## Installation
 
@@ -108,4 +108,4 @@ post-processing at the time of success or failure.
 
 ## Usage
 
-Please refer to [`example/src`](https://github.com/NUNW-Inc/domain-events-for-firestore/tree/main/example/src).
+Please refer to [`examples/src`](https://github.com/NUNW-Inc/domain-events-for-firestore/tree/main/examples/src).
